@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card-ShaperJS</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="script/app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="fraction">
+            <div class="fraction-container">
+                <div class="mapping-container">
+                    <div class="card-mapping">
+                        <div class="card-front card-container" style="background-image: url(resource/card-front.png);">
+                            <div class="card-logo">
+                                <img src="resource/card-logo.svg" alt="Logo">
+                            </div>
+                            <div class="card-middle">
+                                <div class="card-number-map" id="map-number">0000 0000 0000 0000</div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-map" id="map-holder">Jane Appleseed</div>
+                                <div class="card-map" id="map-data">00/00</div>
+                            </div>
+                        </div>
+                        <div class="card-back card-container" style="background-image: url(resource/card-back.png);">
+                            <div class="card-cvc">
+                                <div class="card-map" id="map-cvc">000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-container" id="shape-container">
+                    <form class="card-shape" id="card-shape" action="#">
+                        <div class="card-general">
+                            <div class="input-container">
+                                <label for="input-holder">Cardholder Name</label>
+                                <input id="input-holder" data-type="input-holder" type="text" placeholder="Jane Appleseed" maxlength="30" autocomplete="off">
+                            </div>
+                            <div class="input-container">
+                                <label for="input-number">Card Number</label>
+                                <input id="input-number" data-type="input-number" type="text" placeholder="0000 0000 0000 0000" maxlength="19" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <div class="input-container">
+                                <label for="input-data">Exp. Date (MM/YY)</label>
+                                <input class="input-card-data" data-type="input-data" id="input-data" type="text" placeholder="MM/YY" maxlength="5" autocomplete="off">
+                            </div>
+                            <div class="input-container">
+                                <label for="input-cvc">CVC</label>
+                                <input class="input-card-cvc" data-type="input-cvc" id="input-cvc" type="text" placeholder="000" maxlength="3" autocomplete="off">
+                            </div>
+                        </div>
+                        <button class="shape-submit" id="shape-submit" type="submit">Confirm</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
